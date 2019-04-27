@@ -22,22 +22,15 @@ while(palindrome > 100000) {
   else palindrome = nextLowerPalindrome(palindrome);
 }
 
-// Assumption: The solution has 6 digits.
+// Works only on palindromes with 6 digits.
 function nextLowerPalindrome(palindrome) {
-  palindrome = palindrome - 1000; // Set first three digits to next lower value.
-  palindrome -= palindrome % 1000; // Remove last three digits.
+  // Set first three digits to next lower value.
+  palindrome -= 1000;
+  palindrome = palindrome.toString(10).split('');
 
-  // Mirror third digit.
-  let hundreds = (palindrome % 10000) / 1000;
-  palindrome += hundreds*100;
-
-  // Mirror second digit.
-  let tens = Math.floor((palindrome % 100000) / 10000);
-  palindrome += tens*10;
-
-  // Mirror first digit.
-  let ones = Math.floor(palindrome / 100000);
-  palindrome += ones;
+  // Remove last three digits then mirror.
+  palindrome.splice(3, 3, palindrome[2], palindrome[1], palindrome[0]);
+  palindrome = parseInt(palindrome.join(''), 10);
 
   return palindrome;
 }
