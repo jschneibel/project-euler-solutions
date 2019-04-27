@@ -18,11 +18,11 @@ let palindrome = 997799;
 // Assumption: The solution has 6 digits.
 // Only palindromes with 6 digits are checked.
 while(palindrome > 100000) {
-  if (isProductOfTwoNumbers(palindrome, 999)) break;
+  if (isProductOfTwoNumbers(palindrome, 100, 999)) break;
   else palindrome = nextLowerPalindrome(palindrome);
 }
 
-// Assumption: The palindromes have 6 digits.
+// Assumption: The solution has 6 digits.
 function nextLowerPalindrome(palindrome) {
   palindrome = palindrome - 1000; // Set first three digits to next lower value.
   palindrome -= palindrome % 1000; // Remove last three digits.
@@ -42,12 +42,13 @@ function nextLowerPalindrome(palindrome) {
   return palindrome;
 }
 
-function isProductOfTwoNumbers(product, maxNumberToCheck) {
-  for (let number1 = 2; number1 <= maxNumberToCheck; number1++) {
+function isProductOfTwoNumbers(product, minNumberToCheck, maxNumberToCheck) {
+  for (let number1 = minNumberToCheck; number1 <= maxNumberToCheck; number1++) {
     let number2 = product / number1;
-    if (number2 <= maxNumberToCheck && number2 % 1 == 0) return true;
+    if (number2 >= minNumberToCheck
+      && number2 <= maxNumberToCheck
+      && number2 % 1 === 0) return true;
   }
-
   return false;
 }
 
