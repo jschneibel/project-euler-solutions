@@ -12,11 +12,11 @@
  * What is the 10 001st prime number?
  */
 
-let primeNumbers = [2];
+let primeNumbers = [2, 3];
 
 for (let count = primeNumbers.length; count < 10001; count++) {
-  let number = primeNumbers[primeNumbers.length - 1] + 1;
-  while (isDivisibleBy(number, primeNumbers)) number++;
+  let number = primeNumbers[primeNumbers.length - 1] + 2;
+  while (isDivisibleBy(number, primeNumbers)) number += 2;
   primeNumbers.push(number);
 }
 
