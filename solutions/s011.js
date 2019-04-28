@@ -56,12 +56,12 @@ let data = "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08 "+
 
 data = data.split(' ');
 
-// tranform data to two-dimensional array
+// tranform data to two-dimensional array of integers
 let matrix = [];
 for (let row = 0; row < 20; row++) {
   matrix[row] = [];
   for (let col = 0; col < 20; col++) {
-    matrix[row][col] = data[col + row * 20];
+    matrix[row][col] = parseInt(data[col + row * 20]);
   }
 }
 
