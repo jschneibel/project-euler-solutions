@@ -17,3 +17,11 @@ function isPalindrome(number) {
   if (number === numberReversed) return true;
   else return false;
 }
+
+function numberOfDivisors(number) {
+  let count = 2;
+  for (let divisor = 2; divisor <= Math.floor(Math.sqrt(number)); divisor++) {
+    if (number % divisor === 0) count += 2;
+  }
+  return count;
+}
