@@ -2,7 +2,7 @@
  * Solution to Project Euler problem 12 using JavaScript.
  * Copyright (c) 2019 Jonathan Schneibel
  * MIT License: https://opensource.org/licenses/MIT
- * GitHub: https://github.com/jschneibel/tiny-tune
+ * GitHub: https://github.com/jschneibel/project-euler-solutions
  */
 
 /*
