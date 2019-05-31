@@ -59,21 +59,23 @@ let data = `75
 
 // split numbers into two-dimensional array
 data = data.split(/\n/); // split newlines
-data.forEach(function(v, i, a) {
-  a[i] = a[i].split(" "); // split spaces
+data.forEach(function(value, index, array) {
+  array[index] = array[index].split(" "); // split spaces
+
+  // convert strings to numbers
+  array[index].forEach(function(value2, index2, array2) {
+    array2[index2] = parseInt(array2[index2]);
+  });
 })
 
-console.log(data);
-
-let rows = data.length; // number of rows
-
-// start at the bottom row
-for (let row = rows - 1; row > 0; row--) {
+// start at the second last row (row 0 is at the top with only 1 element)
+// and then move up
+for (let row = data.length - 2; row >= 0; row--) {
   for (let col = 0; col < data[row].length; col++) {
-
+    data[row][col] += Math.max(data[row + 1][col], data[row + 1][col + 1]);
   }
 }
 
-let solution = 0;
+let solution = data[0][0];
 
 console.log(solution);
