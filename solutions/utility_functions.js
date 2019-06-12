@@ -7,8 +7,8 @@
 
 function countDigits(number) {
   let digits = 1;
-  while (number >= Math.pow(10, digits-1)) digits++;
-  return digits-1;
+  while (number >= Math.pow(10, digits - 1)) digits++;
+  return digits - 1;
 }
 
 function isPalindrome(number) {

@@ -38,7 +38,7 @@ for (let i = 40; i > 20; i--) dividend *= i;
 let divisor = 1;
 for (let i = 1; i <= 20; i++) divisor *= i;
 
-let numberOfRoutes = Math.round(dividend/divisor);
+let numberOfRoutes = Math.round(dividend / divisor);
 
 let solution = numberOfRoutes;
 

@@ -21,19 +21,22 @@
 // count the letters of all words required
 
 let oneToNine = ["one", "two", "three", "four", "five", "six", "seven",
-                "eight", "nine"];
+  "eight", "nine"
+];
 oneToNine.forEach(function(e, i, a) {
   a[i] = e.length;
 });
 
 let tenToNineteen = ["ten", "eleven", "twelve", "thirteen", "fourteen",
-                    "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+  "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
+];
 tenToNineteen.forEach(function(e, i, a) {
   a[i] = e.length;
 });
 
 let twentyToNinety = ["twenty", "thirty", "forty", "fifty", "sixty",
-                      "seventy", "eighty", "ninety"];
+  "seventy", "eighty", "ninety"
+];
 twentyToNinety.forEach(function(e, i, a) {
   a[i] = e.length;
 });

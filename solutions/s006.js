@@ -22,7 +22,7 @@ let squareOfSum = Math.pow((100 + 1) * 100 / 2, 2);
 let sumOfSquares = 0;
 
 for (let i = 1; i <= 100; i++) {
-  sumOfSquares += i*i;
+  sumOfSquares += i * i;
 }
 
 let difference = squareOfSum - sumOfSquares;

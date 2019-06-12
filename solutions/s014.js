@@ -49,7 +49,7 @@ for (let i = 1; i < 1000000; i++) {
     if (typeof sequenceLengths[terms[terms.length - 1]] === 'number') {
       // add the stored sequence length of the term to counts
       counts = counts.map(
-                x => x - 1 + sequenceLengths[terms[terms.length - 1]]);
+        x => x - 1 + sequenceLengths[terms[terms.length - 1]]);
       // the rest of the sequence doesn't have to be calculated anymore
       break;
     }

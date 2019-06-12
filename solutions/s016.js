@@ -19,7 +19,7 @@ for (let i = 0; i < 1000; i++) {
   for (let j = 1; j < 1000; j++) {
     number[j] *= 2;
     if (number[j] >= 10) {
-      number[j-1]++;
+      number[j - 1]++;
       number[j] %= 10;
     }
   }

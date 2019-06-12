@@ -22,7 +22,7 @@ while (a < 333 && product === 0) {
   let b = a + 1;
   let c = 1000 - a - b;
   while (b < c && product === 0) {
-    if(a*a + b*b === c*c) product = a * b * c;
+    if (a * a + b * b === c * c) product = a * b * c;
     b++;
     c = 1000 - a - b;
   }

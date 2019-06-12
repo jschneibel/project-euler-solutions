@@ -18,8 +18,7 @@ while (primeFactor < number) {
   if (number % primeFactor == 0) {
     number /= primeFactor;
     primeFactor = 2;
-  }
-  else primeFactor++;
+  } else primeFactor++;
 }
 
 let solution = primeFactor;
